@@ -1,0 +1,34 @@
+/*
+    Purpose:
+
+        Override built-in font size settings (which seems to break
+        frequently with beta versions) using a user-specified value.
+
+    How to use:
+
+        1. Close Mozilla Thunderbird
+        2. Place within %APPDATA%\Thunderbird\Profiles\PROFILE_NAME_HERE\chrome
+        3. Open Mozilla Thunderbird
+
+    References:
+
+        https://support.mozilla.org/en-US/questions/1213554
+        https://github.com/deoren/config-files
+*/
+
+
+
+/* Do not remove the following line -- it's required for correct functioning */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+
+/*
+    Set the default font size
+
+    Keep in mind that 'font.size.systemFontScale' is a factor of this. It is
+    recommended to set that value back to the default of '100' and tweak the value
+    above instead of tweaking them both.
+*/
+
+   * { font-size: 14px !important; }
