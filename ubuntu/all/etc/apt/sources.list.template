@@ -133,9 +133,6 @@ deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-updates univer
 ## Security updates
 ################################################################################
 
-deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security main restricted
-deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security main restricted
-
 deb http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security main restricted
 deb-src http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security main restricted
 
@@ -146,9 +143,6 @@ deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security main rest
 deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security main restricted
 
 
-
-deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security universe
-deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security universe
 
 deb http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security universe
 deb-src http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security universe
@@ -165,9 +159,6 @@ deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security unive
 # Make sure to enable these entries IF you enable the other multiverse repo
 # entries further up in this file.
 ##################################################################################
-
-# deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security multiverse
-# deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security multiverse
 
 # deb http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security multiverse
 # deb-src http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security multiverse
