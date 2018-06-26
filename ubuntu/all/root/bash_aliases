@@ -1,0 +1,9 @@
+# https://github.com/deoren/config-files
+
+# A few safeguards when running as root
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Disable wrapping to help prevent accidental line breaks
+alias nano='nano -w'

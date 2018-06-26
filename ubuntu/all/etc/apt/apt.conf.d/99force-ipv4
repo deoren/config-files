@@ -1,0 +1,6 @@
+# https://github.com/deoren/config-files
+
+# Purpose: Disable IPv6 support in APT so that only IPv4 connections to mirrors
+# will be attempted
+
+Acquire::ForceIPv4 "true";

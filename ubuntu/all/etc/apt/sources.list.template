@@ -1,0 +1,179 @@
+# https://github.com/deoren/config-files
+
+
+# References
+#
+#   * https://wiki.debian.org/SourcesList
+#   * http://help.ubuntu.com/community/UpgradeNotes
+#   * https://askubuntu.com/questions/27513/what-is-the-difference-between-debian-contrib-non-free-and-how-it-corresponds/27515#27515
+
+
+
+###############################################################################
+#
+# INSTALLING THIS FILE MANUALLY:
+#
+# cd /tmp/
+# git clone https://github.com/deoren/config-files
+# mv
+# mv -f /etc/apt/sources.list /etc/apt/sources.list-$(date '+%Y-%m-%d').bak
+# cp -v /tmp/config-files/ubuntu/all/etc/apt/sources.list.template sources.list
+# sed -i "s/CODENAME_PLACEHOLDER/$(lsb_release -c | awk '{print $2}')/g" sources.list
+#
+##############################################################################
+
+
+# Explanation of repos:
+#
+# 1) main: Free software, officially supported by Canonical
+# 2) universe: Free software, NOT supported by Canonical
+# 3) restricted: Non-free software officially supported by Canonical (includes device drivers mainly, amongst others)
+# 4) multiverse: Non-free software NOT supported by Canonical (flashplugin-nonfree comes over here)
+
+
+
+################################################################################
+# main: Free software, officially supported by Canonical
+# restricted: Non-free software officially supported by Canonical (includes device drivers mainly, amongst others)
+################################################################################
+
+deb http://mirrors.linode.com/ubuntu/ CODENAME_PLACEHOLDER main restricted
+deb-src http://mirrors.linode.com/ubuntu/ CODENAME_PLACEHOLDER main restricted
+
+deb http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER main restricted
+deb-src http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER main restricted
+
+deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER main restricted
+deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER main restricted
+
+
+
+
+################################################################################
+## Major bug fix updates produced after the final release of the distribution
+################################################################################
+
+deb http://mirrors.linode.com/ubuntu/ CODENAME_PLACEHOLDER-updates main restricted
+deb-src http://mirrors.linode.com/ubuntu/ CODENAME_PLACEHOLDER-updates main restricted
+
+deb http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-updates main restricted
+deb-src http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-updates main restricted
+
+deb http://security.ubuntu.com/ubuntu CODENAME_PLACEHOLDER-updates main restricted
+deb-src http://security.ubuntu.com/ubuntu CODENAME_PLACEHOLDER-updates main restricted
+
+
+
+
+################################################################################
+# universe: Free software, NOT supported by Canonical (no review or updates from the Ubuntu security team)
+################################################################################
+
+deb http://mirrors.linode.com/ubuntu/ CODENAME_PLACEHOLDER universe
+deb-src http://mirrors.linode.com/ubuntu/ CODENAME_PLACEHOLDER universe
+
+deb http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER universe
+deb-src http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER universe
+
+
+deb http://mirrors.linode.com/ubuntu/ CODENAME_PLACEHOLDER-updates universe
+deb-src http://mirrors.linode.com/ubuntu/ CODENAME_PLACEHOLDER-updates universe
+
+deb http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-updates universe
+deb-src http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-updates universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-updates universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-updates universe
+
+
+
+
+################################################################################
+# multiverse: Non-free software, NOT supported by Canonical (no review or updates from the Ubuntu security team)
+# e.g., flashplugin-nonfree comes from this repo
+################################################################################
+
+# deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER multiverse
+# deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER multiverse
+# deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-updates multiverse
+# deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-updates multiverse
+
+
+
+
+################################################################################
+## Uncomment the following two lines to add software from the 'backports'
+## repository.
+## N.B. software from this repository may not have been tested as
+## extensively as that contained in the main release, although it includes
+## newer versions of some applications which may provide useful features.
+## Also, please note that software in backports WILL NOT receive any review
+## or updates from the Ubuntu security team.
+# deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-backports main restricted universe multiverse
+# deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-backports main restricted universe multiverse
+################################################################################
+
+
+
+################################################################################
+## Uncomment the following two lines to add software from Canonical's
+## 'partner' repository.
+## This software is not part of Ubuntu, but is offered by Canonical and the
+## respective vendors as a service to Ubuntu users.
+# deb http://archive.canonical.com/ubuntu CODENAME_PLACEHOLDER partner
+# deb-src http://archive.canonical.com/ubuntu CODENAME_PLACEHOLDER partner
+################################################################################
+
+
+
+################################################################################
+## Security updates
+################################################################################
+
+deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security main restricted
+deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security main restricted
+
+deb http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security main restricted
+deb-src http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security main restricted
+
+deb http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-security main restricted
+deb-src http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-security main restricted
+
+deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security main restricted
+deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security main restricted
+
+
+
+deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security universe
+
+deb http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security universe
+deb-src http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security universe
+
+deb http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-security universe
+deb-src http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-security universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security universe
+
+
+
+##################################################################################
+# Make sure to enable these entries IF you enable the other multiverse repo
+# entries further up in this file.
+##################################################################################
+
+# deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security multiverse
+# deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security multiverse
+
+# deb http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security multiverse
+# deb-src http://mirrors.linode.com/ubuntu CODENAME_PLACEHOLDER-security multiverse
+
+# deb http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-security multiverse
+# deb-src http://mirrors.digitalocean.com/ubuntu CODENAME_PLACEHOLDER-security multiverse
+
+# deb http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security multiverse
+# deb-src http://us.archive.ubuntu.com/ubuntu/ CODENAME_PLACEHOLDER-security multiverse
