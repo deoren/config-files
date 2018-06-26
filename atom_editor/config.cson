@@ -1,0 +1,25 @@
+# https://github.com/deoren/config-files
+
+"*":
+  core:
+    customFileTypes:
+      "source.shell": [
+        "conf"
+      ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "city-lights-syntax"
+    ]
+    uriHandlerRegistration: "always"
+  editor:
+    fontSize: 16
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+    tabType: "soft"
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false

@@ -1,0 +1,26 @@
+// Place your key bindings in this file to overwrite the defaults
+//
+// $Id: keybindings.json 51 2018-01-21 18:09:17Z deoren $
+// $HeadURL: https://svn.whyaskwhy.org/whyaskwhy.org/documents/configs/visual_studio_code/keybindings.json $
+[
+    {
+        "key": "ctrl+shift+u",
+        "command": "-workbench.action.output.toggleOutput"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "editor.action.transformToLowercase"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "ctrl+alt+u",
+        "command": "git.unstageSelectedRanges"
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "git.revertSelectedRanges"
+    }
+]
