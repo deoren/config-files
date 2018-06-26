@@ -15,10 +15,9 @@
 #
 # cd /tmp/
 # git clone https://github.com/deoren/config-files
-# mv
 # mv -f /etc/apt/sources.list /etc/apt/sources.list-$(date '+%Y-%m-%d').bak
-# cp -v /tmp/config-files/ubuntu/all/etc/apt/sources.list.template sources.list
-# sed -i "s/CODENAME_PLACEHOLDER/$(lsb_release -c | awk '{print $2}')/g" sources.list
+# cp -v /tmp/config-files/ubuntu/all/etc/apt/sources.list.template /etc/apt/sources.list
+# sed -i "s/CODENAME_PLACEHOLDER/$(lsb_release -c | awk '{print $2}')/g" /etc/apt/sources.list
 #
 ##############################################################################
 
