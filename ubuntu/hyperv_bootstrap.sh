@@ -15,11 +15,11 @@ sudo apt-get install -y git
 cd /tmp
 git clone https://github.com/deoren/config-files
 
-sudo cp -vf ${BASE_SRC_PATH}/apt/sources.list.template /etc/apt/
+sudo cp -vf ${BASE_SRC_PATH}/etc/apt/sources.list.template /etc/apt/
 sudo sed -i "s/CODENAME_PLACEHOLDER/${UBUNTU_RELEASE}/g" /etc/apt/sources.list
 
 # Chosen mirrors default to IPv6, but attempts to use them usually fail
-sudo cp -vf ${BASE_SRC_PATH}/apt.conf.d/99force-ipv4 /etc/apt/apt.conf.d/
+sudo cp -vf ${BASE_SRC_PATH}/etc/apt.conf.d/99force-ipv4 /etc/apt/apt.conf.d/
 
 sudo apt-get update
 
