@@ -15,7 +15,7 @@ sudo apt-get install -y git
 cd /tmp
 git clone https://github.com/deoren/config-files
 
-sudo cp -vf ${BASE_SRC_PATH}/etc/apt/sources.list.template /etc/apt/
+sudo cp -vf ${BASE_SRC_PATH}/etc/apt/sources.list.template /etc/apt/sources.list
 sudo sed -i "s/CODENAME_PLACEHOLDER/${UBUNTU_RELEASE}/g" /etc/apt/sources.list
 
 # Chosen mirrors default to IPv6, but attempts to use them usually fail
