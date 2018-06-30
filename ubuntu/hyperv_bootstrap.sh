@@ -33,7 +33,7 @@ if [[ "$UBUNTU_RELEASE" == "xenial" ]]; then
 
     # If a HWE kernel (newer than the base 4.4 or LTS kernel) is installed ...
     #if dpkg -l | grep -E '^ii' | grep linux-image | grep -Eq '4.(10|13|15)'
-    if dpkg -l | grep -E '^ii' | grep linux-image | grep hwe
+    if dpkg -l | grep -E '^ii' | grep linux-image | grep -q hwe
     then
 
         # Install matching "tools" packages to enable hv-fcopy-daemon operation
