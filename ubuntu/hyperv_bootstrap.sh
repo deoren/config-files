@@ -30,10 +30,6 @@ sudo apt-get update
 # fcopy daemon - This daemon implements a file copying service between the host and guest.
 
 if [[ "$UBUNTU_RELEASE" == "xenial" ]]; then
-    sudo apt-get install \
-        linux-virtual-lts-xenial \
-        linux-tools-virtual-lts-xenial \
-        linux-cloud-tools-virtual-lts-xenial
 
     # If a HWE kernel (newer than the base 4.4 or LTS kernel) is installed ...
     #if dpkg -l | grep -E '^ii' | grep linux-image | grep -Eq '4.(10|13|15)'
@@ -45,6 +41,16 @@ if [[ "$UBUNTU_RELEASE" == "xenial" ]]; then
             linux-virtual-hwe-16.04
             linux-cloud-tools-virtual-hwe-16.04 \
             linux-tools-virtual-hwe-16.04
+
+    else
+
+        # The 16.04 instance likely only has the original 4.4 LTS kernel,
+        # so do not install the HWE-based kernel and "tools" packages
+        sudo apt-get install \
+            linux-virtual-lts-xenial \
+            linux-tools-virtual-lts-xenial \
+            linux-cloud-tools-virtual-lts-xenial
+
     fi
 
 else
