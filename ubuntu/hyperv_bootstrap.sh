@@ -38,7 +38,7 @@ if [[ "$UBUNTU_RELEASE" == "xenial" ]]; then
 
         # Install matching "tools" packages to enable hv-fcopy-daemon operation
         sudo apt-get install \
-            linux-virtual-hwe-16.04
+            linux-virtual-hwe-16.04 \
             linux-cloud-tools-virtual-hwe-16.04 \
             linux-tools-virtual-hwe-16.04
 
