@@ -8,8 +8,12 @@ GRUB_HIDDEN_TIMEOUT=0
 GRUB_HIDDEN_TIMEOUT_QUIET=false
 GRUB_TIMEOUT=10
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1280x720"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1366x768 elevator=noop"
+
+# native host resolution options
+#
+# 1366x768 : 1152x630, 1280x630
+# 1600x900 : 1366x768
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1280x630 elevator=noop"
 GRUB_CMDLINE_LINUX=""
 
 # Uncomment to enable BadRAM filtering, modify to suit your needs
