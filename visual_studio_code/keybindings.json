@@ -1,7 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 //
-// $Id: keybindings.json 51 2018-01-21 18:09:17Z deoren $
-// $HeadURL: https://svn.whyaskwhy.org/whyaskwhy.org/documents/configs/visual_studio_code/keybindings.json $
+// https://github.com/deoren/config-files
 [
     {
         "key": "ctrl+shift+u",
