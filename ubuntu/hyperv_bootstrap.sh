@@ -70,3 +70,6 @@ sudo update-grub
 
 # Install other common packages?
 # sudo apt-get install subversion tmux
+
+# Disable automatic updates
+sudo bash ${BASE_SRC_PATH}/disable_automatic_updates.sh
