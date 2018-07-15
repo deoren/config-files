@@ -215,6 +215,10 @@
         "editor.tabSize": 3
     },
 
+    "[markdown]": {
+        "editor.tabSize": 2
+      },
+
     // Controls whether Git should check for unsaved files before committing.
     "git.promptToSaveFilesBeforeCommit": true
 
