@@ -5,6 +5,7 @@
     customFileTypes:
       "source.shell": [
         "conf"
+        "cfg"
       ]
     telemetryConsent: "no"
     themes: [
@@ -17,8 +18,15 @@
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 10
     tabLength: 4
     tabType: "soft"
+  github:
+    automaticCommitMessageWrapping: true
+  "line-ending-selector":
+    defaultLineEnding: "LF"
   welcome:
     showOnStartup: false
   whitespace:
