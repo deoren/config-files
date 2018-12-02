@@ -37,11 +37,11 @@
     // Move editor selections with drag and drop
     "editor.dragAndDrop": true,
 
-    // Enables parameter hints
-    "editor.parameterHints": true,
+    // Enables a pop-up that shows parameter documentation and type information as you type.
+    "editor.parameterHints.enabled": true,
 
     // Controls if the editor should automatically close brackets after opening them
-    "editor.autoClosingBrackets": true,
+    "editor.autoClosingBrackets": "beforeWhitespace",
 
     // Controls if the editor should automatically format the line after typing
     "editor.formatOnType": true,
@@ -111,6 +111,9 @@
     // If enabled, prevent opening the same file in another group if the file was already opened. One common scenario is the file picker (Quick Open): by default, it will open a file in the current active Editor Group. Changing this setting will prefer to open the file in any of the other groups in case the file is already opened there.
     "workbench.editor.revealIfOpen": true,
 
+    // Controls whether a top border is drawn on modified (dirty) editor tabs or not.
+    "workbench.editor.highlightModifiedTabs": true,
+
     // Causes a newline to be inserted after a closing brace in multi-line expressions like if/else
     "powershell.codeFormatting.newLineAfterCloseBrace": true,
 
@@ -161,6 +164,8 @@
         // config file patterns listed above, but is used by many other
         // applications also
         "*.cfg": "shellscript",
+
+        "*.ini.tmpl": "ini"
     },
 
     // I want to retain control of when updates to extensions are applied
@@ -220,6 +225,12 @@
       },
 
     // Controls whether Git should check for unsaved files before committing.
-    "git.promptToSaveFilesBeforeCommit": true
+    "git.promptToSaveFilesBeforeCommit": true,
+    "search.showLineNumbers": true,
+
+    // Controls after how many characters text is wrapped.
+    "rewrap.wrappingColumn": 78,
+    "editor.renderControlCharacters": true,
+    "breadcrumbs.enabled": true
 
 }
