@@ -231,6 +231,11 @@
     // Controls after how many characters text is wrapped.
     "rewrap.wrappingColumn": 78,
     "editor.renderControlCharacters": true,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+
+    // Set all ordered list items as '1' instead of hard-coding specific steps
+    // GitHub (confirmed) and other Markdown parsers will properly convert
+    // these entries into the proper order.
+    "markdown.extension.orderedList.marker": "one"
 
 }
