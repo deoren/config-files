@@ -2,6 +2,7 @@
 
 # https://github.com/deoren/config-files
 # https://gist.github.com/deoren/4d87ff5ddc831a22be433607341e5441
+# https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/supported-ubuntu-virtual-machines-on-hyper-v
 
 # Purpose: Perform initial setup for an Ubuntu VM running within Hyper-V environment
 
