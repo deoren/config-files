@@ -21,5 +21,9 @@
     {
         "key": "ctrl+alt+r",
         "command": "git.revertSelectedRanges"
+    },
+    {
+        "key": "ctrl+alt+NumPad0",
+        "command": "editor.action.fontZoomReset"
     }
 ]
