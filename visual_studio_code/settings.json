@@ -213,6 +213,8 @@
     "restructuredtext.confPath": "${workspaceRoot}/source",
     "gitlens.keymap": "alternate",
     "gitlens.historyExplorer.enabled": true,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 
     // Configure editor settings to be overridden for [reStructuredText] markup language
