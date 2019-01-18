@@ -1,0 +1,9 @@
+# Purpose: Direct test systems at local Squid proxy server for cached updates
+
+# FIXME: Direct access works, but APT completely fails to work without
+# reachable proxy server specified below
+#Acquire::http::Proxy "http://172.23.194.74:3128";
+
+# Use workaround for LP bug 827627 to allow opportunistic proxy use
+# (e.g., fall back to direct access if proxy unavailable)
+# Acquire::http::ProxyAutoDetect "/etc/apt/detect-http-proxy.sh";
