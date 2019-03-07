@@ -242,8 +242,6 @@
     // GitHub (confirmed) and other Markdown parsers will properly convert
     // these entries into the proper order.
     "markdown.extension.orderedList.marker": "one",
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
     "gitlens.advanced.telemetry.enabled": false,
     "svn.autorefresh": false
 
