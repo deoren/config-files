@@ -243,6 +243,11 @@
     // these entries into the proper order.
     "markdown.extension.orderedList.marker": "one",
     "gitlens.advanced.telemetry.enabled": false,
-    "svn.autorefresh": false
+    "svn.autorefresh": false,
+
+    // Adjust the appearance of the window title bar. On Linux and Windows,
+    // this setting also affects the application and context menu appearances.
+    // Changes require a full restart to apply.
+    "window.titleBarStyle": "custom"
 
 }
