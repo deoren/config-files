@@ -244,6 +244,7 @@
     "markdown.extension.orderedList.marker": "one",
     "gitlens.advanced.telemetry.enabled": false,
     "svn.autorefresh": false,
+    "svn.remoteChanges.checkFrequency": 0,
 
     // Adjust the appearance of the window title bar. On Linux and Windows,
     // this setting also affects the application and context menu appearances.
