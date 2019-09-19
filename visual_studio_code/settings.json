@@ -256,6 +256,10 @@
         "editor.defaultFormatter": "ms-vscode.Go"
     },
     "go.formatTool": "goimports",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "[powershell]": {
+        "editor.defaultFormatter": "ms-vscode.powershell"
+    },
+    "svn.enableProposedApi": "product"
 
 }
