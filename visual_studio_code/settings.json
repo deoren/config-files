@@ -223,7 +223,8 @@
     },
 
     "[markdown]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
       },
     "[yaml]": {
         "editor.tabSize": 2
