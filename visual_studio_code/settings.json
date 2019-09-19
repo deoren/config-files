@@ -250,6 +250,12 @@
     // Adjust the appearance of the window title bar. On Linux and Windows,
     // this setting also affects the application and context menu appearances.
     // Changes require a full restart to apply.
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+
+    "[go]": {
+        "editor.defaultFormatter": "ms-vscode.Go"
+    },
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true
 
 }
