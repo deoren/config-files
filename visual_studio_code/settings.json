@@ -231,7 +231,7 @@
     },
 
     // Controls whether Git should check for unsaved files before committing.
-    "git.promptToSaveFilesBeforeCommit": true,
+    "git.promptToSaveFilesBeforeCommit": "always",
     "search.showLineNumbers": true,
 
     // Controls after how many characters text is wrapped.
