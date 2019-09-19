@@ -53,7 +53,7 @@
     "editor.tabSize": 4,
 
     // If true, automatically formats when they are saved. This is a VS Code setting and may also affect non-PowerShell files.
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
 
     // Control whether IntelliSense is active when typing in comments or strings. You can still request completions with Ctrl+Space but quick suggestions, AKA "24x7 IntelliSense", are disabled by default in comments and strings. To tune the suggestions behavior to your needs, we now allow more control over the editor.quickSuggestions setting:
     "editor.quickSuggestions": {
