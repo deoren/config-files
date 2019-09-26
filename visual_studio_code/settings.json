@@ -260,6 +260,8 @@
     "[powershell]": {
         "editor.defaultFormatter": "ms-vscode.powershell"
     },
-    "svn.enableProposedApi": "product"
+    "svn.enableProposedApi": "product",
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+    "markdown.extension.tableFormatter.enabled": true
 
 }
