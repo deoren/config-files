@@ -262,6 +262,11 @@
     },
     "svn.enableProposedApi": "product",
     "markdown.extension.tableFormatter.normalizeIndentation": true,
-    "markdown.extension.tableFormatter.enabled": true
+    "markdown.extension.tableFormatter.enabled": true,
+    "[go.mod]": {
+        "editor.defaultFormatter": "ms-vscode.Go"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
 
 }
