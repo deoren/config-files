@@ -4,6 +4,9 @@
 # -*- mode: sh; indent-tabs-mode: nil; tab-width: 4 -*-
 # code: language=sh insertSpaces=true tabSize=4
 
+# https://github.com/deoren/config-files
+
+
 # Sample hook script provided by Git for Windows
 # Kept because it looks useful
 if git rev-parse --verify HEAD >/dev/null 2>&1
