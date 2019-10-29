@@ -65,5 +65,11 @@ if [ -n "$output" ]; then
     exit 1
 fi
 
-# Run golangci-lint to help prevent basic problems from creeping in
+# Run linters to help prevent basic problems from creeping in
+
+# go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 golangci-lint run
+
+# go get -u honnef.co/go/tools/cmd/staticcheck
+staticcheck ./...
+
