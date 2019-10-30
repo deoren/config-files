@@ -3,10 +3,12 @@
 # Export: code --list-extensions
 
 2gua.rainbow-brackets
+766b.go-outliner
 alefragnani.Bookmarks
 alefragnani.pascal
 alefragnani.pascal-formatter
 bmarkovic.haproxy
+bungcip.better-toml
 chrislajoie.vscode-modelines
 CoenraadS.bracket-pair-colorizer-2
 coolbear.systemd-unit-file
@@ -44,6 +46,7 @@ ms-vscode.powershell
 pranaygp.vscode-css-peek
 redhat.vscode-xml
 redhat.vscode-yaml
+samuelcolvin.jinjahtml
 shuworks.vscode-table-formatter
 stayfool.vscode-asciidoc
 stkb.rewrap
