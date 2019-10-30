@@ -6,6 +6,53 @@
 
 # https://github.com/deoren/config-files
 
+# Redirect output to stderr.
+exec 1>&2
+
+
+##################################################################
+# Run linters to ensure consistent Go code formatting and to
+# help prevent basic problems from creeping in
+##################################################################
+
+# https://github.com/go-goracle/goracle#pre-commit
+#set -e
+# output="$(gofmt -l "$@")"
+
+# if [ -n "$output" ]; then
+#     echo >&2 "Go files must be formatted with gofmt. Please run:"
+#     for f in $output; do
+#         echo >&2 "  gofmt -w $PWD/$f"
+#     done
+#     exit 1
+# fi
+
+# Force gofmt "matches" to generate non-zero exit code
+# This doesn't appear to work well with Git for Windows / Git Bash
+#
+# diff: /dev/fd/63: No such file or directory
+# diff: /dev/fd/62: No such file or directory
+#
+#diff -u <(echo -n) <(gofmt -l -e -d .)
+
+# go get -u golang.org/x/lint/golint
+golint -set_exit_status ./...
+
+go vet ./...
+
+# go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+# https://github.com/golangci/golangci-lint#supported-linters
+golangci-lint run \
+    -E goimports \
+    -E gosec \
+    -E stylecheck \
+    -E goconst \
+    -E depguard \
+    -E prealloc
+
+# go get -u honnef.co/go/tools/cmd/staticcheck
+staticcheck ./...
+
 
 # Sample hook script provided by Git for Windows
 # Kept because it looks useful
@@ -19,9 +66,6 @@ fi
 
 # If you want to allow non-ASCII filenames set this variable to true.
 allownonascii=$(git config --bool hooks.allownonascii)
-
-# Redirect output to stderr.
-exec 1>&2
 
 # Cross platform projects tend to avoid non-ASCII filenames; prevent
 # them from being added to the repository. We exploit the fact that the
@@ -49,27 +93,3 @@ fi
 
 # If there are whitespace errors, print the offending file names and fail.
 exec git diff-index --check --cached $against --
-
-
-# https://github.com/go-goracle/goracle#pre-commit
-set -e
-
-# Ensure consistent Go code formatting
-output="$(gofmt -l "$@")"
-
-if [ -n "$output" ]; then
-    echo >&2 "Go files must be formatted with gofmt. Please run:"
-    for f in $output; do
-        echo >&2 "  gofmt -w $PWD/$f"
-    done
-    exit 1
-fi
-
-# Run linters to help prevent basic problems from creeping in
-
-# go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
-golangci-lint run
-
-# go get -u honnef.co/go/tools/cmd/staticcheck
-staticcheck ./...
-
