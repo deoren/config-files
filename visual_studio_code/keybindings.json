@@ -25,5 +25,9 @@
     {
         "key": "ctrl+alt+NumPad0",
         "command": "editor.action.fontZoomReset"
+    },
+    {
+        "key": "ctrl+alt+q",
+        "command": "workbench.action.toggleMaximizedPanel"
     }
 ]
