@@ -16,6 +16,11 @@
     // Controls the font size.
     "editor.fontSize": 16,
 
+    // "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    // "editor.fontFamily": "monospace",
+    // "editor.fontFamily": "Ubuntu Mono",
+    // "editor.fontFamily": "Cascadia Code",
+
     // Zoom the font of the editor when using mouse wheel and holding Ctrl
     "editor.mouseWheelZoom": true,
 
@@ -26,7 +31,7 @@
     "editor.trimAutoWhitespace": true,
 
     // Controls whether the editor should render indent guides
-    "editor.renderIndentGuides": true,
+    "editor.renderIndentGuides": false,
 
     // Controls the delay in ms after which quick suggestions will show up
     //"editor.quickSuggestionsDelay": 500,
@@ -62,19 +67,29 @@
     "other": true
     },
 
-    // Controls if the editor should automatically adjust the indentation when users type, paste or move lines. Indentation rules of the language must be available.
-    "editor.autoIndent": true,
+    // Controls if the editor should automatically adjust the indentation when
+    // users type, paste or move lines. Indentation rules of the language must
+    // be available.
+    "editor.autoIndent":"advanced",
 
-    // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty
-    "editor.rulers": [80],
+    // Render vertical rulers after a certain number of monospace characters.
+    // Use multiple values for multiple rulers. No rulers are drawn if array
+    // is empty
+    "editor.rulers": [
+        80
+    ],
 
-    // Controls if the diff editor shows changes in leading or trailing whitespace as diffs
-    "diffEditor.ignoreTrimWhitespace": false,
+    // New as of v1.60.0, intended to replace Bracket Pair Colorizer extension
+    // by CoenraadS.
+    // https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
 
     // Controls if the diff editor shows +/- indicators for added/removed changes
     "diffEditor.renderIndicators": true,
 
-    // Controls if the diff editor shows the diff side by side or inline
+    "diffEditor.wordWrap": "off",
+    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
 
     // When enabled, will trim trailing whitespace when you save a file.
@@ -95,9 +110,6 @@
     // - off: folders will replace the last active window
     // Note that there can still be cases where this setting is ignored (e.g. when using the -new-window or -reuse-window command line option).
     "window.openFilesInNewWindow": "default",
-
-    // Adjust the zoom level of the window. The original size is 0 and each increment above (e.g. 1) or below (e.g. -1) represents zooming 20% larger or smaller. You can also enter decimals to adjust the zoom level with a finer granularity.
-    "window.zoomLevel": 0,
 
     // Controls how windows are being reopened after a restart. Select 'none' to always start with an empty window, 'one' to reopen the last window you worked on, 'folders' to reopen all folders you had opened or 'all' to reopen all windows of your last session.
     "window.restoreWindows": "all",
@@ -172,16 +184,13 @@
     "extensions.autoUpdate": false,
     "python.linting.enabledWithoutWorkspace": false,
     "gitlens.advanced.messages": {
+
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
         "suppressFileNotUnderSourceControlWarning": false,
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
     },
 
     // SPHINX SETTINGS
@@ -214,7 +223,6 @@
     "gitlens.keymap": "alternate",
     "gitlens.historyExplorer.enabled": true,
     "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 
     // Configure editor settings to be overridden for [reStructuredText] markup language
@@ -223,11 +231,14 @@
     },
 
     "[markdown]": {
+        "editor.wordWrap": "off",
+        "editor.quickSuggestions": false,
         "editor.tabSize": 2,
         "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-      },
+    },
     "[yaml]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
 
     // Controls whether Git should check for unsaved files before committing.
@@ -253,7 +264,8 @@
     "window.titleBarStyle": "custom",
 
     "[go]": {
-        "editor.defaultFormatter": "ms-vscode.Go"
+        "editor.defaultFormatter": "golang.go",
+        "editor.suggest.insertMode":"replace"
     },
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
@@ -263,11 +275,206 @@
     "svn.enableProposedApi": "product",
     "markdown.extension.tableFormatter.normalizeIndentation": true,
     "markdown.extension.tableFormatter.enabled": true,
-    "[go.mod]": {
-        "editor.defaultFormatter": "ms-vscode.Go"
+
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#b52e31"
+        },
+        {
+            "name": "Auth0 Orange",
+            "value": "#eb5424"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "C# Purple",
+            "value": "#68217A"
+        },
+        {
+            "name": "Gatsby Purple",
+            "value": "#639"
+        },
+        {
+            "name": "Go Cyan",
+            "value": "#5dc9e2"
+        },
+        {
+            "name": "Java Blue-Gray",
+            "value": "#557c9b"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#00b3e6"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    "cSpell.userWords": [
+        "Ansible",
+        "datacenter",
+        "debugf",
+        "Dedupe",
+        "deduped",
+        "Dependabot",
+        "ezproxy",
+        "EZproxy",
+        "fqdn",
+        "fqdns",
+        "gitignore",
+        "gopath",
+        "gosec",
+        "goteamsnotify",
+        "govmomi",
+        "Graylog",
+        "guake",
+        "iana",
+        "imap",
+        "infof",
+        "integrii",
+        "jessevdk",
+        "jetdirect",
+        "LDAP",
+        "ldaps",
+        "LOCKSS",
+        "markdownlint",
+        "mingw",
+        "mingw-w64",
+        "msgf",
+        "mware",
+        "nagios",
+        "nmap",
+        "nosec",
+        "NRPE",
+        "omitempty",
+        "posix",
+        "Printf",
+        "Println",
+        "Qualys",
+        "recurse",
+        "Redmine",
+        "rfacauthdb",
+        "rfacmyusers",
+        "rhel",
+        "rsyslog",
+        "splunk",
+        "sqlite",
+        "staticcheck",
+        "structs",
+        "stunnel",
+        "subcommand",
+        "syslog",
+        "systemd",
+        "TTLs",
+        "unmarshals",
+        "v",
+        "vcenter",
+        "vmware",
+        "vsphere",
+        "w",
+        "warnf",
+        "webhook",
+        "zerolog"
+    ],
+    "todo-tree.general.revealBehaviour": "start of line",
+    "todo-tree.tree.showCountsInTree": true,
+    "todo-tree.highlights.enabled": true,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "todo-tree.tree.showScanModeButton": false,
+    "[go.sum]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "[go.mod]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "go.lintTool": "golangci-lint",
+    "rewrap.wholeComment": false,
+    "go.lintFlags": [
+        "--exclude-use-default=false"
+    ],
+    "editor.copyWithSyntaxHighlighting": false,
+    "[git-commit]": {
+        "rewrap.wrappingColumn": 70
+    },
+    "go.languageServerFlags": [
+        //"-rpc.trace", // for more detailed debug logging
+    ],
+    "git.terminalAuthentication": false,
+    "github.gitAuthentication": false,
+
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "go.lintOnSave": "workspace",
+    "editor.suggest.insertMode": "replace",
+    "bookmarks.navigateThroughAllFiles": true,
+    "bookmarks.saveBookmarksInProject": true,
+    "bookmarks.sideBar.expanded": true,
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "editor.comments.ignoreEmptyLines": false,
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollPreviewWithEditor": false,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "editor.highlightActiveIndentGuide": false,
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f"
+    },
+    "editor.wordWrap": "off",
+    "redhat.telemetry.enabled": false,
+
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "notebook.showFoldingControls": "always",
+
+//     "gopls": {
+//         "analyses": {
+//         "fieldalignment": true, // Disable the unreachable analyzer.
+//         },
+// 
+//         },
 
 }
