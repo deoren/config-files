@@ -1,50 +1,57 @@
 # https://github.com/deoren/config-files
 
-# Export: code --list-extensions
+# Export:
+#
+# cd ~/.vscode-insiders/extensions
+# ls | awk '{print $NF}' | sed -r -e 's/-[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}//g' -e 's#/##g' | awk '!seen[$0]++'
+#
+# I didn't have any luck with this (presumably only works from stable version):
+#
+# code --list-extensions
 
 2gua.rainbow-brackets
 766b.go-outliner
-aaron-bond.better-comments
-alefragnani.Bookmarks
+alefragnani.bookmarks
 alefragnani.pascal
 alefragnani.pascal-formatter
-AppulateInc.filewatcher
 asciidoctor.asciidoctor-vscode
-bierner.color-info
+bajdzis.vscode-database
+ban.spellright
 bierner.emojisense
 bierner.markdown-checkbox
 bmarkovic.haproxy
+brunnerh.insert-unicode
 budparr.language-hugo-vscode
-bungcip.better-toml
-buttaiwan.cursor-charcode
 chrislajoie.vscode-modelines
-codespaces-contrib.codeswing
-CoenraadS.bracket-pair-colorizer-2
+coenraads.bracket-pair-colorizer-2
 coolbear.systemd-unit-file
+dakara.transformer
 darkriszty.markdown-table-prettify
-DavidAnson.vscode-markdownlint
+davidanson.vscode-markdownlint
 donjayamanne.githistory
-DotJoshJohnson.xml
-dzhavat.css-initial-value
+dorzey.vscode-sqlfluff
 eamodio.gitlens
-eliean.vscode-svn
+esbenp.prettier-vscode
 formulahendry.docker-explorer
-GehDoc.vscode-textile-preview
-GitHub.vscode-pull-request-github
-GlenBuktenica.unicode-substitutions
+gehdoc.vscode-textile-preview
+glenbuktenica.unicode-substitutions
 golang.go
-Gruntfuggly.todo-tree
-haaaad.ansible
+gruntfuggly.todo-tree
 hangxingliu.vscode-systemd-support
+heaths.vscode-guid
+hogashi.crontab-syntax-highlight
 humao.rest-client
+idleberg.badges
 idleberg.innosetup
 idleberg.textile
 ipedrazas.kubernetes-snippets
 joaompinto.asciidoctor-vscode
 johnpapa.vscode-peacock
 johnstoncode.svn-scm
+jsynowiec.vscode-insertdatestring
 leodevbro.blockman
 lextudio.restructuredtext
+mariorodeghiero.vue-theme
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
@@ -61,29 +68,26 @@ ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode-remote.remote-ssh-explorer
 ms-vscode-remote.remote-wsl
-ms-vscode.atom-keybindings
 ms-vscode.powershell
+ms-vscode.powershell-preview
 mtxr.sqltools
-mtxr.sqltools-driver-sqlite
-pflannery.vscode-versionlens
+oderwat.indent-rainbow
 plex.vscode-protolint
 pranaygp.vscode-css-peek
+quicktype.quicktype
+redhat.ansible
 redhat.vscode-commons
 redhat.vscode-xml
 redhat.vscode-yaml
 rusnasonov.vscode-hugo
-rust-lang.rust
 samuelcolvin.jinjahtml
-serayuzgur.crates
 shuworks.vscode-table-formatter
-sohamkamani.code-eol
-stayfool.vscode-asciidoc
-stkb.rewrap
+sirtori.indenticator
+stkb.rewrap-beta.1
 streetsidesoftware.code-spell-checker
 tamasfe.even-better-toml
-vincaslt.highlight-matching-tag
+tmlo.nagios
 vsls-contrib.codetour
 vsls-contrib.gistfs
-waderyan.gitblame
 yzhang.markdown-all-in-one
-zenor.makefile-creator
+zbr.vscode-ansible
