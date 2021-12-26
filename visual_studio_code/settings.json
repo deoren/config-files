@@ -5,10 +5,14 @@
 
     // Disable sending crash reports to be sent to Microsoft.
     // This option requires restart to take effect.
-    "telemetry.enableCrashReporter": false,
+    // "telemetry.enableCrashReporter": false,
 
     // https://code.visualstudio.com/docs/supporting/faq
-    "telemetry.enableTelemetry": false,
+    // "telemetry.enableTelemetry": false,
+
+    // Combines "telemetry.enableCrashReporter" and
+    // "telemetry.enableTelemetry" settings
+    "telemetry.telemetryLevel": "off",
 
     // plugin setting
     "vscode-mysql.enableTelemetry": false,
